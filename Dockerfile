@@ -15,6 +15,4 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     && echo "deb ${PPA_LOC} bionic main" > ${REPO_PATH} \
     && echo "deb-src ${PPA_LOC} bionic main" >> ${REPO_PATH} \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ${GPG_KEY} \
-    && apt-get purge -y --auto-remove \
-      gnupg \
     && rm -rf /var/lib/apt/lists/*
